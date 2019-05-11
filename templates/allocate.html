@@ -1,0 +1,65 @@
+
+<html>
+<head>
+	<title>parked</title>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style type="text/css">#td{border-right: 2px solid white;}
+</style></head>
+<body style="font-family: Alegreya Sans SC;">
+	<div class="row" >
+		<div class="col-sm-8 jumbotron">
+<h1 class=" bg-success text-white" style="font-size: 46px;text-align: center;">your vehicle can be parked@ slot no. <span class="badge badge-warning">{{slot}}</span></h1>
+</div>
+<div class="col-sm-4 jumbotron ">
+	<a href="/"><input type="submit" name="back"  value="return"   class="btn btn-danger" style="font-size: 46px;text-align: center;"></input></a>
+</div>
+</div>
+<div class="row">
+   <div class="col-sm">
+  <div class="container"> <table class="table-hover " >
+
+    <caption style="font-size: 60px; text-align:center;">Parking Area</caption>
+    <tbody >
+    	 {%if slot==1%}
+    	  <tr style="font-size: 60px">
+        <td style="text-align: center;padding: 20px" class="bg-success" id="td">slot1</td>
+        <td style="text-align: center;padding: 20px" class="bg-warning"id="td">slot2</td>
+        <td style="text-align: center;padding: 20px"class="bg-danger"id="td">slot3</td>
+      </tr>
+      {%elif slot==2 %}
+       <tr style="font-size: 60px">
+        <td style="text-align: center;padding: 20px" class="bg-danger" id="td">slot1</td>
+        <td style="text-align: center;padding: 20px" class="bg-success" id="td">slot2</td>
+        <td style="text-align: center;padding: 20px" class="bg-warning" id="td">slot3</td>
+      </tr>
+      {% elif slot==3%}
+       <tr style="font-size: 60px">
+        <td style="text-align: center;padding: 20px" class="bg-warning"id="td">slot1</td>
+        <td style="text-align: center;padding: 20px" class="bg-danger"id="td">slot2</td>
+        <td style="text-align: center;padding: 20px" class="bg-success"id="td">slot3</td>
+      </tr>
+      {%endif%}
+     
+      <tr class="bg-dark text-warning" style="font-size: 60px">
+         <td style="text-align: center;padding: 20px">============</td>
+         <td style="text-align: center;padding: 20px">============</td>
+         <td style="text-align: center;padding: 20px">============</td>
+      </tr>
+      <tr style="font-size: 60px">
+        <td style="text-align: center;padding: 20px" class="bg-secondary"id="td">slot4</td>
+        <td style="text-align: center;padding: 20px"class="bg-secondary"id="td">slot5</td>
+        <td style="text-align: center;padding: 20px"class="bg-secondary"id="td">slot6</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+</body>
+</html>

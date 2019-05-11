@@ -1,0 +1,17 @@
+			{%extends "main_page.html"%}
+
+
+				{% block content%}
+            	<div class="jumbotron bg-dark text-white" style="margin: auto;padding: auto;">
+            		{% block alert%}{%endblock alert%}
+            	<form action="/" method="post">
+            	<p>name</p>
+            	<input type="textfield" name="name" placeholder="name" class="btn btn-light btn-block text-dark"></input>
+            	<p>username</p>
+            	<input type="textfield" name="username" placeholder="@username" class="btn btn-light btn-block text-dark"></input>
+            	<p>password</p>            	
+            	<input type="password" name="pass" class="btn btn-light btn-block text-dark" placeholder="password"></input>
+            	<input type="submit" name="submit" value="signon" class="btn btn-primary btn-block" style="margin: 10px 0 0 0;"></input>
+            	</form>
+				</div>
+            		{%endblock%}

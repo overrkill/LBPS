@@ -1,0 +1,8 @@
+
+<html>
+<body>
+	<h1>enter yor approx parking time</h1>
+   <form method="post">
+    <a href='/allocate'><input type="button" name="submit"  value="park"></a>
+    </form>
+</html>

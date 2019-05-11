@@ -1,0 +1,35 @@
+<html>
+<head>
+		 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body class="bg-secondary" style="font-family: Alegreya Sans SC;">
+	<div class="jumbotron bg-dark text-white" style="font-family: Alegreya Sans SC;text-align: center;border:4px solid white;border-radius: 6px"><h1 >enter approximate time until parked</h1></div>
+   <form  action="/time_page" method="post">
+   	<div class="row">
+   		<div class="col"></div>
+   		<div class="col">
+
+   	<input type="datetime-local"  step=".1000" name="ptime" placeholder="0:0"  class="jumbotron" style="align-content:  center;margin:auto;width:100%;font-size: 62px;text-align: justify;"></input>
+   	<a id="datetime"></a>
+   </div>
+   <div class="col"></div>
+</div>
+   <div class="row">
+   	<div class="col-sm"></div>
+   	<div class="col-sm" style="align-content:center;">
+    <a style="text-align: center;font-size: 42px;">
+    	<input class=" btn btn-warning  btn-block" type="submit" name="submit"  value="park" style="font-family: Alegreya Sans SC;font-size:42px ;margin: 10px 0px 0px 0px;"></a>
+    </div>
+    <div class="col-sm"></div>
+</div>
+    </form>
+    <script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (("0"+dt.getDate()).slice(-2)) +"/"+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()+7).slice(-2)) +":"+ (("0"+dt.getMinutes()+1).slice(-2));
+</script>
+</body>
+</html>
